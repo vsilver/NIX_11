@@ -6,11 +6,9 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
-
 public class SumNumInString {
 
-    private SumNumInString(){}
+    private SumNumInString() { }
 
     public static void makeSumNumStr() throws IOException {
         try {
@@ -21,10 +19,10 @@ public class SumNumInString {
             Matcher m = p.matcher(str);
 
             int sum = 0;
-            while(m.find()) {
+            while (m.find()) {
                 char[] arr = (m.group()).toCharArray();
                 for (int i = 0; i < arr.length; i++) {
-                        sum += Integer.parseInt(String.valueOf(arr[i]));
+                    sum += Integer.parseInt(String.valueOf(arr[i]));
                 }
             }
 
