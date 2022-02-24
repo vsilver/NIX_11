@@ -6,6 +6,15 @@ import java.io.InputStreamReader;
 
 public class LessonsDuration {
 
+    private static final int VAR_1 = 1;
+    private static final int VAR_2 = 2;
+    private static final int VAR_5 = 5;
+    private static final int VAR_9 = 9;
+    private static final int VAR_10 = 10;
+    private static final int VAR_15 = 15;
+    private static final int VAR_45 = 45;
+    private static final int VAR_60 = 60;
+
     public static void сalculateDuration() throws IOException {
         while(true) {
             try {
@@ -13,13 +22,13 @@ public class LessonsDuration {
                 System.out.print("Please enter the lessons number from 1 to 10) >> ");
                 String str = bufferedReader.readLine();
                 int numLesson = Integer.parseInt(str);
-                if (numLesson < 1 || numLesson > 10) {
+                if (numLesson < VAR_1 || numLesson > VAR_10) {
                     System.out.println("You enter incorrect number!!!");
                     continue;
                 }
-                int duration  = numLesson * 45 + (numLesson / 2) * 5 + ((numLesson + 1) / 2 - 1) * 15;
-                int hour = duration / 60 + 9;
-                int min = duration % 60;
+                int duration  = numLesson * VAR_45 + (numLesson / VAR_2) * VAR_5 + ((numLesson + VAR_1) / VAR_2 - VAR_1) * VAR_15;
+                int hour = duration / VAR_60 + VAR_9;
+                int min = duration % VAR_60;
                 System.out.println("Lessons end at: ");
                 System.out.println(hour + " " + min);
                 break;

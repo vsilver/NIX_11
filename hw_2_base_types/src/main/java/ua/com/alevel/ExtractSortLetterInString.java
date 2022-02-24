@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class ExtractSortLetterInString {
 
     public static void extractString() throws IOException {
-        int count[] = new int[256];
+        int[] count = new int[256];
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter your string: ");
         String str = reader.readLine();
@@ -26,7 +26,7 @@ public class ExtractSortLetterInString {
         String str2 = String.valueOf(arr);
 
         for (int i = 0; i < str2.length(); i++) {
-            count[(int) str2.charAt(i)]++;
+            count[str2.charAt(i)]++;
         }
 
         for (int i = 0; i < 256; i++) {
