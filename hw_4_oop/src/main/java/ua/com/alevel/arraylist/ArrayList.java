@@ -25,7 +25,8 @@ public class ArrayList <E>{
         this.size++;
     }
 
-    public E get(int index) {
+    public E get(int index)
+    {
         return (index >= 0 && index < this.size) ? (E) this.array[index] : null;
     }
 

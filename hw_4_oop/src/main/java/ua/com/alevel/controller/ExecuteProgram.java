@@ -1,13 +1,17 @@
 package ua.com.alevel.controller;
 
+import ua.com.alevel.arraylist.ArrayList;
 import ua.com.alevel.entity.Watch;
 import ua.com.alevel.entity.WatchShape;
+import ua.com.alevel.service.WatchService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class ExecuteProgram {
+
+    private static final WatchService watchService = new WatchService();
 
     public static void run() {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -107,9 +111,9 @@ public class ExecuteProgram {
 
     private static void findAll() {
         boolean flag = false;
-        CustomArrayList<Watch> watches = watchService.findAll();
-        for (int i = 0; i < watches.getLen(); i++) {
-            Watch watch = watches.getElemenentById(i);
+        ArrayList<Watch> watches = watchService.findAll();
+        for (int i = 0; i < watches.size(); i++) {
+            Watch watch = watches.get(i);
             if (watch != null) {
                 flag = true;
                 System.out.println(watch);

@@ -1,10 +1,11 @@
 package ua.com.alevel.service;
 
 import ua.com.alevel.arraylist.ArrayList;
+import ua.com.alevel.dao.WatchDaoImpl;
 import ua.com.alevel.entity.Watch;
 
 public class WatchService {
-    private final WatchDao watchDao = new WatchDaoImpl();
+    private final WatchDaoImpl watchDao = new WatchDaoImpl();
 
     public void create(Watch watch) {
         watchDao.create(watch);
@@ -17,7 +18,6 @@ public class WatchService {
         }
         return true;
     }
-
 
     public void update(Watch watch) {
         if (checkExistId(watch.getId())) {
