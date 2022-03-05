@@ -51,7 +51,7 @@ public class ExecuteProgram {
 
     private static void create(BufferedReader reader) {
         try {
-            System.out.print("Type the watch name (Orient, Seiko, Cartier, Rolex ): ");
+            System.out.print("Type the watch name (ORIENT, SEIKO, CARTIER, ROLEX ): ");
             String name = reader.readLine();
             System.out.print("Type the watch shape (round, square, oval, triangular, rectangular): ");
             String shape = reader.readLine();
@@ -60,6 +60,7 @@ public class ExecuteProgram {
             watch.setName(name);
             watch.setShape(watchShape);
             watchService.create(watch);
+            System.out.println(watch);
         } catch (Exception e) {
             System.out.println("Trouble: " + e.getMessage());
         }
@@ -79,6 +80,7 @@ public class ExecuteProgram {
             watch.setName(name);
             watch.setShape(watchShape);
             watchService.update(watch);
+            System.out.println(watch);
         } catch (Exception e) {
             System.out.println("Trouble: " + e.getMessage());
         }
