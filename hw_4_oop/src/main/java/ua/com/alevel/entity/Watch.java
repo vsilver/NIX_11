@@ -23,11 +23,11 @@ public class Watch extends AbstractEntity {
 
     @Override
     public String toString() {
-        return "Phone: {" +
+        return "Phone: { " +
                 "id='" + getId() + '\'' +
                 ", name='" + name + '\'' +
-                ", color=" + shape +
-                '}';
+                ", shape=" + shape +
+                " }";
     }
 
 

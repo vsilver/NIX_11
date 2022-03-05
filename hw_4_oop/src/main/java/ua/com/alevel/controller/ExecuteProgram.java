@@ -34,7 +34,7 @@ public class ExecuteProgram {
         System.out.println("Find new watch by id press 4.");
         System.out.println("Find all watches press 5.");
         System.out.println("Exit press 0.");
-
+        System.out.println("->>");
     }
 
     private static void baseCrud(String choose, BufferedReader reader) {
@@ -61,6 +61,7 @@ public class ExecuteProgram {
             watch.setShape(watchShape);
             watchService.create(watch);
             System.out.println(watch);
+            System.out.println();
         } catch (Exception e) {
             System.out.println("Trouble: " + e.getMessage());
         }
@@ -81,6 +82,7 @@ public class ExecuteProgram {
             watch.setShape(watchShape);
             watchService.update(watch);
             System.out.println(watch);
+            System.out.println();
         } catch (Exception e) {
             System.out.println("Trouble: " + e.getMessage());
         }
@@ -105,6 +107,7 @@ public class ExecuteProgram {
                 System.out.println("Watch with such id doesn't exist!!!");
             } else {
                 System.out.println(watch);
+                System.out.println();
             }
         } catch (Exception e) {
             System.out.println("Trouble: " + e.getMessage());
@@ -119,6 +122,7 @@ public class ExecuteProgram {
             if (watch != null) {
                 flag = true;
                 System.out.println(watch);
+                System.out.println();
             }
         }
         if (!flag) {
