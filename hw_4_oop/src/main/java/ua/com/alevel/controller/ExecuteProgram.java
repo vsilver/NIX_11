@@ -8,6 +8,7 @@ import ua.com.alevel.service.WatchService;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Locale;
 
 public class ExecuteProgram {
 
@@ -52,7 +53,7 @@ public class ExecuteProgram {
     private static void create(BufferedReader reader) {
         try {
             System.out.print("Type the watch name (ORIENT, SEIKO, CARTIER, ROLEX ): ");
-            String name = reader.readLine();
+            String name = reader.readLine().toUpperCase(Locale.ROOT);
             System.out.print("Type the watch shape (round, square, oval, triangular, rectangular): ");
             String shape = reader.readLine();
             WatchShape watchShape = WatchShape.valueOf(shape.toUpperCase());
@@ -72,7 +73,7 @@ public class ExecuteProgram {
             System.out.print("Type the watch id: ");
             String id = reader.readLine();
             System.out.print("Type the watch name (Orient, Seiko, Cartier, Rolex ): ");
-            String name = reader.readLine();
+            String name = reader.readLine().toUpperCase(Locale.ROOT);
             System.out.print("Type the watch shape (round, square, oval, triangular, rectangular): ");
             String shape = reader.readLine();
             WatchShape watchShape = WatchShape.valueOf(shape.toUpperCase());
