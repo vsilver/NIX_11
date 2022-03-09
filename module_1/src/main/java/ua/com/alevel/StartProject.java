@@ -1,5 +1,6 @@
 package ua.com.alevel;
 
+import ua.com.alevel.counttrianglearea.CountTriangleArea;
 import ua.com.alevel.countuniccharacters.CountUnicCharacters;
 
 import java.io.BufferedReader;
@@ -19,8 +20,8 @@ public class StartProject {
                 switch (reader.readLine())
                 {
                     case "1" -> CountUnicCharacters.getCountOfUnicCharacters();
-                    /*case "2" -> HorseMove.makeHorseMove();
-                    case "3" -> AreaOfTriangle.findAreaOfTriangle();
+                    case "2" -> CountTriangleArea.getCountTriangleArea();
+                    /*case "3" -> AreaOfTriangle.findAreaOfTriangle();
                     case "4" -> BracketsString.checkBracketsString();
                     case "5" -> GameOfLife.startGameOfLife();*/
                     case "0" -> {
@@ -40,8 +41,8 @@ public class StartProject {
     private static void startMenu()
     {
         System.out.println("Please enter 1 if yoy want to find the quantity of unique digits in a string");
-        System.out.println("Please enter 2 if yoy want to check the possibility of a horse move");
-        System.out.println("Please enter 3 if yoy want to find the triangle's area");
+        System.out.println("Please enter 2 if yoy want to find the triangle's area");
+        System.out.println("Please enter 3 if yoy want to check the possibility of a horse move");
         System.out.println("Please enter 4 if yoy want to check a string for validity");
         System.out.println("Please enter 5 if yoy want to play the game of life");
         System.out.println("Please enter 0 if yoy want to exit");
